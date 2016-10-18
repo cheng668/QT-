@@ -4,19 +4,19 @@ BaseInfo::BaseInfo(QWidget *parent) :
     QWidget(parent)
 {
 	QWidget *mainwidget = new QWidget(this);
-	UserNameLabel = new QLabel(tr("用户名："));
+	UserNameLabel = new QLabel(QStringLiteral("用户名："));
 	UserNameLineEdit = new QLineEdit(this);
-	NameLabel = new QLabel(tr("姓名："));
+	NameLabel = new QLabel(QStringLiteral("姓名："));
 	NameLineEdit = new QLineEdit(this);
-	SexLabel = new QLabel(tr("性别："));
+	SexLabel = new QLabel(QStringLiteral("性别："));
 	SexComboBox = new QComboBox(this);
-	SexComboBox->addItem(tr("女"));
-	SexComboBox->addItem(tr("男"));
-	DepartmentLabel = new QLabel(tr("部门："));
+	SexComboBox->addItem(QStringLiteral("女"));
+	SexComboBox->addItem(QStringLiteral("男"));
+	DepartmentLabel = new QLabel(QStringLiteral("部门："));
 	DepartmentTextEdit = new QTextEdit(this);
-	AgeLabel = new QLabel(tr("年龄："));
+	AgeLabel = new QLabel(QStringLiteral("年龄："));
 	AgeLineEdit = new QLineEdit(this);
-	OtherLabel = new QLabel(tr("备注："));
+	OtherLabel = new QLabel(QStringLiteral("备注："));
 	OtherLabel->setFrameStyle(QFrame::Panel | QFrame::Sunken);
 	LeftLayout = new QGridLayout();
 	LeftLayout->addWidget(UserNameLabel, 0, 0);
@@ -33,18 +33,18 @@ BaseInfo::BaseInfo(QWidget *parent) :
 	LeftLayout->setColumnStretch(0, 1);
 	LeftLayout->setColumnStretch(1, 3);
 	//右侧
-	HeadLabel = new QLabel(tr("头像："));
+	HeadLabel = new QLabel(QStringLiteral("头像："));
 	HeadIconLabel = new QLabel(this);
 	QPixmap icon("312.png");
 	HeadIconLabel->setPixmap(icon);
 	HeadIconLabel->resize(icon.width(), icon.height());
-	UpdateHeadBtn = new QPushButton(tr("更新"));
+	UpdateHeadBtn = new QPushButton(QStringLiteral("更新"));
 	TopRigheLaout = new QHBoxLayout();
 	TopRigheLaout->setSpacing(20);
 	TopRigheLaout->addWidget(HeadLabel);
 	TopRigheLaout->addWidget(HeadIconLabel);
 	TopRigheLaout->addWidget(UpdateHeadBtn);
-	IntroductionLabel = new QLabel(tr("个人说明："));
+	IntroductionLabel = new QLabel(QStringLiteral("个人说明："));
 	IntroductionTextEdit = new QTextEdit(this);
 	RightLayout = new QVBoxLayout();
 	RightLayout->setMargin(10);

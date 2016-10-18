@@ -10,17 +10,17 @@ mainw::mainw(QWidget *parent)
 	QSplitter *splitterMain = new QSplitter(Qt::Horizontal, this);
 	splitterMain->setOpaqueResize(true);
 	QListWidget *list = new QListWidget(this);
-	list->insertItem(0, QObject::tr("基本信息"));
-	list->insertItem(1, QObject::tr("联系方式"));
-	list->insertItem(2, QObject::tr("详细资料"));
+	list->insertItem(0, QStringLiteral("基本信息"));
+	list->insertItem(1, QStringLiteral("联系方式"));
+	list->insertItem(2, QStringLiteral("详细资料"));
 	
 	Content *content = new Content(this);
 	splitterMain->addWidget(list);
 	splitterMain->addWidget(content);
 
-	//QObject::connect(list, SIGNAL(currentRowChanged(int)), content->stack, SLOT(setCurrentIndex(int)));
+	QObject::connect(list, SIGNAL(currentRowChanged(int)), content->stack, SLOT(setCurrentIndex(int)));
 
-	splitterMain->setWindowTitle(QObject::tr("修改用户资料"));
+	splitterMain->setWindowTitle(QStringLiteral("修改用户资料"));
 	splitterMain->setMinimumSize(splitterMain->minimumSize());
 	splitterMain->setMaximumSize(splitterMain->maximumSize());
 	splitterMain->setVisible(true);

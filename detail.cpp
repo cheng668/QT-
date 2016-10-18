@@ -3,19 +3,19 @@
 Detail::Detail(QWidget *parent)
 	: QWidget(parent)
 {
-	NationalLabel = new QLabel(tr("国家/地址："));
+	NationalLabel = new QLabel(QStringLiteral("国家/地址："));
 	NationalComboBox = new QComboBox(this);
-	NationalComboBox->insertItem(0, tr("中国"));
-	NationalComboBox->insertItem(1, tr("美国"));
-	NationalComboBox->insertItem(2, tr("英国"));
-	ProvinceLabel = new QLabel(tr("省份："));
+	NationalComboBox->insertItem(0, QStringLiteral("中国"));
+	NationalComboBox->insertItem(1, QStringLiteral("美国"));
+	NationalComboBox->insertItem(2, QStringLiteral("英国"));
+	ProvinceLabel = new QLabel(QStringLiteral("省份："));
 	ProvinceComboBox = new QComboBox(this);
-	ProvinceComboBox->insertItem(0, tr("江苏省"));
-	ProvinceComboBox->insertItem(1, tr("山东省"));
-	ProvinceComboBox->insertItem(2, tr("广东省"));
-	CityLabel = new QLabel(tr("城市："));
+	ProvinceComboBox->insertItem(0, QStringLiteral("江苏省"));
+	ProvinceComboBox->insertItem(1, QStringLiteral("山东省"));
+	ProvinceComboBox->insertItem(2, QStringLiteral("广东省"));
+	CityLabel = new QLabel(QStringLiteral("城市："));
 	CityLineEdit = new QLineEdit;
-	IntroductLabel = new QLabel(tr("个人说明："));
+	IntroductLabel = new QLabel(QStringLiteral("个人说明："));
 	IntroductTextEdit = new QTextEdit;
 	mainLayout = new QGridLayout(this);
 	mainLayout->setMargin(15);

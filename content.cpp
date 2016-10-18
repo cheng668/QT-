@@ -7,15 +7,15 @@ Content::Content(QWidget *parent)
 	stack = new QStackedWidget(this);
 	stack->setFrameStyle(QFrame::Panel | QFrame::Raised);
 	baseInfo = new BaseInfo(stack);
-	//contact = new Contact(stack);
-	//detail = new Detail(stack);
+	contact = new Contact(stack);
+	detail = new Detail(stack);
 	stack->addWidget(baseInfo);
-	//stack->addWidget(contact);
-	//stack->addWidget(detail);
+	stack->addWidget(contact);
+	stack->addWidget(detail);
 	//QWidget *w = new QWidget(this);
 	//stack->addWidget(w);
-	AmendBtn = new QPushButton(tr("修改"));
-	CloseBtn = new QPushButton(tr("关闭"));
+	AmendBtn = new QPushButton(QStringLiteral("修改"));
+	CloseBtn = new QPushButton(QStringLiteral("关闭"));
 	
 	QHBoxLayout *BtnLayout = new QHBoxLayout();
 	BtnLayout->addStretch(1);
